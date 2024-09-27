@@ -3,191 +3,266 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Bootstrap Class Demo</title>
-
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
-      crossorigin="anonymous"
-    />
+    <title>Procedure | CSI Fall Detection</title>
     <link
       rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
-      integrity="sha384-tViUnnbYAV00FLIhhi3v/dWt3Jxw4gZQcNoSCxCIFNJVCx7/D55/wXsrNIRANwdD"
-      crossorigin="anonymous"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
     />
+    <link rel="icon" href="img/favicon.svg" />
     <link rel="stylesheet" href="styles.css" />
-
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
-      crossorigin="anonymous"
-    ></script>
   </head>
   <body class="body">
-    <div class="container-lg">
-      <!-- Navbar-->
-      <nav class="navbar navbar-expand-lg navbar-dark nb-background-color">
-        <!-- lg = large breakpoint, navbar-light = make text dark-->
-        <div class="container">
-          <a href="#" class="navbar-brand">
-            <img
-              src="img/droplet.png"
-              alt="Water Logo"
-              class="d-inline-block align-text-top w-50"
-            />
-          </a>
-
-          <!-- Hamburger Menu Button-->
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navmenu"
+    <nav
+      class="navbar navbar-expand-lg navbar-dark sticky-top mt-2 rounded-5 container-2-3 shadow-lg"
+    >
+      <div class="container-fluid px-4">
+        <a class="navbar-brand fw-bold d-flex align-items-center" href="/">
+          <!-- Wi-Fi Icon -->
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            fill="#fff"
+            viewBox="0 0 256 256"
+            class="me-2 text-center"
           >
-            <span class="navbar-toggler-icon"></span>
-          </button>
-
-          <!-- Collapsible nabar menu with custom hover underline CSS animation-->
-          <div class="collapse navbar-collapse" id="navmenu">
-            <!-- Links to hamburger menu button-->
-            <ul class="navbar-nav ms-auto">
-              <!-- ms-auto provides auto margin spacing-->
-              <li class="nav-item">
-                <a
-                  href="authors.html"
-                  class="nav-link hover-underline-animation nbMenuItem"
-                  >Authors</a
-                >
-              </li>
-              <li class="nav-item">
-                <a
-                  href="procedure.html"
-                  class="nav-link hover-underline-animation nbMenuItem"
-                  >Procedure</a
-                >
-              </li>
-              <li class="nav-item">
-                <a
-                  href="results.html"
-                  class="nav-link hover-underline-animation nbMenuItem"
-                  >Results</a
-                >
-              </li>
-            </ul>
-          </div>
+            <path
+              d="M144,204a16,16,0,1,1-16-16A16,16,0,0,1,144,204ZM239.61,83.91a176,176,0,0,0-223.22,0,12,12,0,1,0,15.23,18.55,152,152,0,0,1,192.76,0,12,12,0,1,0,15.23-18.55Zm-32.16,35.73a128,128,0,0,0-158.9,0,12,12,0,0,0,14.9,18.81,104,104,0,0,1,129.1,0,12,12,0,0,0,14.9-18.81ZM175.07,155.3a80.05,80.05,0,0,0-94.14,0,12,12,0,0,0,14.14,19.4,56,56,0,0,1,65.86,0,12,12,0,1,0,14.14-19.4Z"
+            ></path>
+          </svg>
+          CSI Fall Detection
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div
+          class="collapse navbar-collapse justify-content-end"
+          id="navbarNav"
+        >
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="author.html">Author</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="procedure.html" id="active-link"
+                >Procedure</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="results.html">Results</a>
+            </li>
+          </ul>
         </div>
-      </nav>
+      </div>
+    </nav>
 
-      <!-- How to use the sensor-->
-       <section class="procedure">
-        <div class="container">
-          <br>
-          <div class="text-center">
-            <h1>Procedure</h1>
-            <h2>Using a numbered list, describe your procedure (include pictures)</h2>
-          </div>
-
-          <hr><br>
-
-          <table class="table table-hover text-center table-light table-bordered border-dark-subtle">
-            <thead>
-              <tr class="table-primary">
-                <th><h3>Step</h3></th>
-                <th><h3>Description</h3></th>
-                <th><h3>Image</h3></th>
-              </tr>
-            </thead>
-
-            <tbody class="table-group-divider">
-              <tr class="align-middle">
-                <!-- scope = row specifies header cell is the header is the header for that row-->
-                <th scope="row" class="table-secondary">
-                  <h3>1</h3>
-                </th>
-                <td>
-                  <h3 class="howTo">Start Python Flask server</h3>
-                </td>
-                <td class="text-center"><img src="img/python-logo.png" alt="Python Logo"></td>
-              </tr>
-
-              <tr class="align-middle">
-                
-              </tr>
-                <!-- scope = row specifies header cell is the header is the header for that row-->
-                <th scope="row" class="table-secondary">
-                  <h3>2</h3>
-                </th>
-                <td>
-                  <h3 class="howTo">Power circuit on.  SR-04/05 transmits data to Nano IoT</h3>
-                </td>
-                <td class="text-center"><img src="img/range-finder-tp.png" alt="Range Finder"></td>
-              </tr>
-
-              <tr class="align-middle">
-                <!-- scope = row specifies header cell is the header is the header for that row-->
-                <th scope="row" class="table-secondary">
-                  <h3>3</h3>
-                </th>
-                <td>
-                  <h3 class="howTo">Nano IoT connects to PC via WiFi and sends data to Arduino program</h3>
-                </td>
-                <td class="text-center"><img src="img/nano33-iot3.png" alt="Nano 33 IoT"></td>
-              </tr>
-
-              <tr class="align-middle">
-                <!-- scope = row specifies header cell is the header is the header for that row-->
-                <th scope="row" class="table-secondary">
-                  <h3>4</h3>
-                </th>
-                <td>
-                  <h3 class="howTo">Arduino and Flask server communicate via HTTP request protocol</h3>
-                </td>
-                <td class="text-center"><img src="img/arduino-logo.png" alt="Arduino Logo"></td>
-              </tr>
-
-              <tr class="align-middle">
-                <!-- scope = row specifies header cell is the header is the header for that row-->
-                <th scope="row" class="table-secondary">
-                  <h3>5</h3>
-                </th>
-                <td>
-                  <h3 class="howTo">Flask connects to Firebase and sends data for storage</h3>
-                </td>
-                <td class="text-center"><img src="img/firebase-logo.png" alt="Firebase"></td>
-              </tr>
-
-              <tr class="align-middle">
-                <!-- scope = row specifies header cell is the header is the header for that row-->
-                <th scope="row" class="table-secondary">
-                  <h3>1</h3>
-                </th>
-                <td>
-                  <h3 class="howTo">Start Python Flask server</h3>
-                </td>
-                <td class="text-center"><img src="img/python-logo.png" alt="Python Logo"></td>
-              </tr>
-
-            </tbody>
-          </table>
-
-
-
-        </div>
-       </section>
-
-      
-
-      <!-- Footer -->
-       <footer class="p-5 footer text-light text-center position-relative">
-            <div class="container">
-                <p class="lead">Copyright &copy; SE 2024 Bootstrap Demo</p>
-                <a href="#" class="position-absolute bottom-0 end-0 p-5">
-                    <i class="bi bi-arrow-up-circle h2 icon-white"></i>
+    <div class="container-2-3 mt-5 section-contained">
+      <h1 class="mb-2 text-center">Procedure</h1>
+      <p class="lead text-center mb-5">
+        Below is the detailed procedure used for the CSI Fall Detection project.
+      </p>
+      <!-- Table of Procedure -->
+      <div class="table-responsive">
+        <table
+          class="table table-hover text-center align-middle rounded-table table-text"
+        >
+          <thead>
+            <tr>
+              <th class="th-bg">Step</th>
+              <th class="th-bg">Description</th>
+              <th class="th-bg">Image</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- Step 1 -->
+            <tr>
+              <td><strong>1</strong></td>
+              <td>
+                Prepare the data by merging the label and activity data files
+                from the UT-HAR dataset.
+              </td>
+              <td>
+                <a href="#img1">
+                  <img
+                    src="img/step-1-procedure.png"
+                    class="img-fluid img-fixed-size rounded-3"
+                    alt="Merging data from the UT-HAR dataset"
+                  />
                 </a>
-            </div>  
-       </footer>
+                <a href="#" id="img1" class="lightbox">
+                  <img
+                    src="img/step-1-procedure.png"
+                    class="img-fluid expanded-image rounded-3"
+                    alt="Merging data from the UT-HAR dataset"
+                  />
+                </a>
+              </td>
+            </tr>
+            <!-- Step 2 -->
+            <tr>
+              <td><strong>2</strong></td>
+              <td>
+                Apply various filter techniques (Butterworth Low-Pass, Hampel,
+                Discrete Wave Transform) to the data for denoising.
+              </td>
+              <td>
+                <a href="#img2">
+                  <img
+                    src="img/step-2-procedure.webp"
+                    class="img-fluid img-fixed-size rounded-3"
+                    alt="Applying filter techniques for data denoising"
+                  />
+                </a>
+                <a href="#" id="img2" class="lightbox">
+                  <img
+                    src="img/step-2-procedure.webp"
+                    class="img-fluid expanded-image rounded-3"
+                    alt="Applying filter techniques for data denoising"
+                  />
+                </a>
+              </td>
+            </tr>
+            <!-- Step 3 -->
+            <tr>
+              <td><strong>3</strong></td>
+              <td>
+                Implement the sliding window algorithm to segment fall events.
+              </td>
+              <td>
+                <a href="#img3">
+                  <img
+                    src="img/step-3-procedure.jpg"
+                    class="img-fluid img-fixed-size rounded-3"
+                    alt="Sliding window algorithm for fall event segmentation"
+                  />
+                </a>
+                <a href="#" id="img3" class="lightbox">
+                  <img
+                    src="img/step-3-procedure.jpg"
+                    class="img-fluid expanded-image rounded-3"
+                    alt="Sliding window algorithm for fall event segmentation"
+                  />
+                </a>
+              </td>
+            </tr>
+            <!-- Step 4 -->
+            <tr>
+              <td><strong>4</strong></td>
+              <td>
+                Extract features from the segmented data using the time,
+                frequency, and time-frequency domains.
+              </td>
+              <td>
+                <a href="#img4">
+                  <img
+                    src="img/step-4-procedure.jpg"
+                    class="img-fluid img-fixed-size rounded-3"
+                    alt="Feature extraction from segmented data"
+                  />
+                </a>
+                <a href="#" id="img4" class="lightbox">
+                  <img
+                    src="img/step-4-procedure.jpg"
+                    class="img-fluid expanded-image rounded-3"
+                    alt="Feature extraction from segmented data"
+                  />
+                </a>
+              </td>
+            </tr>
+            <!-- Step 5 -->
+            <tr>
+              <td><strong>5</strong></td>
+              <td>
+                Input the data into a machine learning algorithm for training
+                and prediction.
+              </td>
+              <td>
+                <a href="#img5">
+                  <img
+                    src="img/step-5-procedure.webp"
+                    class="img-fluid img-fixed-size rounded-3"
+                    alt="Input data into machine learning algorithm"
+                  />
+                </a>
+                <a href="#" id="img5" class="lightbox">
+                  <img
+                    src="img/step-5-procedure.webp"
+                    class="img-fluid expanded-image rounded-3"
+                    alt="Input data into machine learning algorithm"
+                  />
+                </a>
+              </td>
+            </tr>
+            <!-- Step 6 -->
+            <tr>
+              <td><strong>6</strong></td>
+              <td>Run cross-validation to ensure good performance metrics.</td>
+              <td>
+                <a href="#img6">
+                  <img
+                    src="img/step-6-procedure.png"
+                    class="img-fluid img-fixed-size rounded-3"
+                    alt="Cross-validation for performance metrics"
+                  />
+                </a>
+                <a href="#" id="img6" class="lightbox">
+                  <img
+                    src="img/step-6-procedure.png"
+                    class="img-fluid expanded-image rounded-3"
+                    alt="Cross-validation for performance metrics"
+                  />
+                </a>
+              </td>
+            </tr>
+            <!-- Step 7 -->
+            <tr>
+              <td><strong>7</strong></td>
+              <td>
+                Evaluate each model/algorithm on various metrics and determine
+                the best-performing.
+              </td>
+              <td>
+                <a href="#img7">
+                  <img
+                    src="img/step-7-procedure.webp"
+                    class="img-fluid img-fixed-size rounded-3"
+                    alt="Evaluation of models and algorithms"
+                  />
+                </a>
+                <a href="#" id="img7" class="lightbox">
+                  <img
+                    src="img/step-7-procedure.webp"
+                    class="img-fluid expanded-image rounded-3"
+                    alt="Evaluation of models and algorithms"
+                  />
+                </a>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
     </div>
+
+    <!-- Footer -->
+    <footer class="footer py-4">
+      <div class="container-2-3 text-center">
+        <p class="mb-0">
+          &copy; 2024
+          <a href="https://niyelhassan.com" target="_blank">Niyel Hassan</a>.
+          View source on
+          <a href="https://github.com/niyelhassan/rp_hassan" target="_blank"
+            >GitHub</a
+          >. <a href="#" id="scroll-top">&#x25B2; Scroll to Top</a>
+        </p>
+      </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   </body>
 </html>

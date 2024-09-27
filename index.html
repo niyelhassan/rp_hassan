@@ -3,185 +3,264 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Bootstrap Class Demo</title>
-
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
-      crossorigin="anonymous"
-    />
+    <title>CSI Fall Detection</title>
     <link
       rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
-      integrity="sha384-tViUnnbYAV00FLIhhi3v/dWt3Jxw4gZQcNoSCxCIFNJVCx7/D55/wXsrNIRANwdD"
-      crossorigin="anonymous"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
     />
+    <link rel="icon" href="img/favicon.svg" />
     <link rel="stylesheet" href="styles.css" />
-
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
-      crossorigin="anonymous"
-    ></script>
   </head>
-  <body class="body">
-    <div class="container-lg">
-      <!-- Navbar-->
-      <nav class="navbar navbar-expand-lg navbar-dark nb-background-color">
-        <!-- lg = large breakpoint, navbar-light = make text dark-->
-        <div class="container">
-          <a href="#" class="navbar-brand">
-            <img
-              src="img/droplet.png"
-              alt="Water Logo"
-              class="d-inline-block align-text-top w-50"
-            />
-          </a>
 
-          <!-- Hamburger Menu Button-->
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navmenu"
+  <body class="bg-light">
+    <!-- Floating Navbar -->
+    <nav
+      class="navbar navbar-expand-lg navbar-dark sticky-top mt-2 rounded-5 container-2-3 shadow-lg"
+    >
+      <div class="container-fluid px-4">
+        <a class="navbar-brand fw-bold d-flex align-items-center" href="/">
+          <!-- Wi-Fi Icon -->
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            fill="#fff"
+            viewBox="0 0 256 256"
+            class="me-2 text-center"
           >
-            <span class="navbar-toggler-icon"></span>
-          </button>
+            <path
+              d="M144,204a16,16,0,1,1-16-16A16,16,0,0,1,144,204ZM239.61,83.91a176,176,0,0,0-223.22,0,12,12,0,1,0,15.23,18.55,152,152,0,0,1,192.76,0,12,12,0,1,0,15.23-18.55Zm-32.16,35.73a128,128,0,0,0-158.9,0,12,12,0,0,0,14.9,18.81,104,104,0,0,1,129.1,0,12,12,0,0,0,14.9-18.81ZM175.07,155.3a80.05,80.05,0,0,0-94.14,0,12,12,0,0,0,14.14,19.4,56,56,0,0,1,65.86,0,12,12,0,1,0,14.14-19.4Z"
+            ></path>
+          </svg>
+          CSI Fall Detection
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div
+          class="collapse navbar-collapse justify-content-end"
+          id="navbarNav"
+        >
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="author.html">Author</a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="procedure.html">Procedure</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="results.html">Results</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
 
-          <!-- Collapsible nabar menu with custom hover underline CSS animation-->
-          <div class="collapse navbar-collapse" id="navmenu">
-            <!-- Links to hamburger menu button-->
-            <ul class="navbar-nav ms-auto">
-              <!-- ms-auto provides auto margin spacing-->
-              <li class="nav-item">
-                <a
-                  href="authors.html"
-                  class="nav-link hover-underline-animation nbMenuItem"
-                  >Authors</a
-                >
-              </li>
-              <li class="nav-item">
-                <a
-                  href="procedure.html"
-                  class="nav-link hover-underline-animation nbMenuItem"
-                  >Procedure</a
-                >
-              </li>
-              <li class="nav-item">
-                <a
-                  href="results.html"
-                  class="nav-link hover-underline-animation nbMenuItem"
-                  >Results</a
-                >
-              </li>
-            </ul>
+    <!-- Hero Section -->
+    <div class="container-2-3 section">
+      <div class="row align-items-center g-5">
+        <div class="col-md-6 image-hover-container">
+          <img
+            src="img/hero-csi.png"
+            alt="CSI Human Activity Dataset"
+            class="img-fluid shadow rounded-3"
+          />
+          <div class="image-caption-hero">
+            Source:
+            <a
+              class="caption-link"
+              href="https://drive.google.com/file/d/1WokJHnYsFhaqScHmfrkk7i9q58vbd_g1/view?usp=sharing"
+              target="_blank"
+              >Research Poster</a
+            >
           </div>
         </div>
-      </nav>
-
-      <!-- Showcasse-->
-      <section class="showcase text-light p-2 text-center">
-        <!-- headerBG = custom CSS BG color, p-2 = padding 2-->
-        <div class="container">
-          <div class="row">
-            <div class="col-sm-6 p-0 d-flex align-items-center">
-              <!-- img-fluid = won't expand image larger than than the container-->
-              <img class="img-fluid" src="img/img-5509.jpg" alt="Shark River" />
-            </div>
-            <div class="col-sm-6 p-0 d-flex align-items-center">
-              <div class="container">
-                <h1 class="display-4">
-                  Water Temperatures Near Avon, NJ (2021-2022)
-                </h1>
-                <!-- display-4 makes the h1 standout-->
-                <h2>Building a Site with Bootstrap</h2>
-              </div>
-            </div>
+        <div class="col-md-6 text-center">
+          <h2 class="display-4 fw-bold">
+            An Ensemble Framework for Fall Detection
+          </h2>
+          <p class="lead">
+            Using Multivariate Wi-Fi Channel State Information (CSI)
+          </p>
+          <!-- Research Paper and Code Links -->
+          <div class="mt-5">
+            <a
+              href="https://docs.google.com/document/d/1NsY9glFJHJQx5DNh6sM3hrI-TWMLvAEtZSrQcrSK5dU/edit?usp=drive_link"
+              class="custom-link d-inline-flex align-items-center me-4"
+              target="_blank"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="20"
+                height="20"
+                fill="currentColor"
+                viewBox="0 0 256 256"
+                class="me-2"
+              >
+                <path
+                  d="M216.49,79.52l-56-56A12,12,0,0,0,152,20H56A20,20,0,0,0,36,40V216a20,20,0,0,0,20,20H200a20,20,0,0,0,20-20V88A12,12,0,0,0,216.49,79.52ZM160,57l23,23H160ZM60,212V44h76V92a12,12,0,0,0,12,12h48V212Z"
+                ></path>
+              </svg>
+              Read the paper
+            </a>
+            <a
+              href="https://github.com/niyelhassan/csi-fall-dsp"
+              class="custom-link d-inline-flex align-items-center"
+              target="_blank"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="20"
+                height="20"
+                fill="currentColor"
+                viewBox="0 0 256 256"
+                class="me-2"
+              >
+                <path
+                  d="M212.62,75.17A63.7,63.7,0,0,0,206.39,26,12,12,0,0,0,196,20a63.71,63.71,0,0,0-50,24H126A63.71,63.71,0,0,0,76,20a12,12,0,0,0-10.39,6,63.7,63.7,0,0,0-6.23,49.17A61.5,61.5,0,0,0,52,104v8a60.1,60.1,0,0,0,45.76,58.28A43.66,43.66,0,0,0,92,192v4H76a20,20,0,0,1-20-20,44.05,44.05,0,0,0-44-44,12,12,0,0,0,0,24,20,20,0,0,1,20,20,44.05,44.05,0,0,0,44,44H92v12a12,12,0,0,0,24,0V192a20,20,0,0,1,40,0v40a12,12,0,0,0,24,0V192a43.66,43.66,0,0,0-5.76-21.72A60.1,60.1,0,0,0,220,112v-8A61.5,61.5,0,0,0,212.62,75.17ZM196,112a36,36,0,0,1-36,36H112a36,36,0,0,1-36-36v-8a37.87,37.87,0,0,1,6.13-20.12,11.65,11.65,0,0,0,1.58-11.49,39.9,39.9,0,0,1-.4-27.72,39.87,39.87,0,0,1,26.41,17.8A12,12,0,0,0,119.82,68h32.35a12,12,0,0,0,10.11-5.53,39.84,39.84,0,0,1,26.41-17.8,39.9,39.9,0,0,1-.4,27.72,12,12,0,0,0,1.61,11.53A37.85,37.85,0,0,1,196,104Z"
+                ></path>
+              </svg>
+              Explore the code
+            </a>
           </div>
         </div>
-      </section>
-
-      <!-- Overview-->
-      <section class="overview text-dark p-2 text-left">
-        <div class="container">
-          <div class="row">
-            <div class="col-sm-4 p-3">
-              <img
-                class="img-fluid"
-                src="img/19418.jpeg"
-                alt="Water Temperature Graph"
-              />
-            </div>
-            <div class="col-sm-8 p-3">
-              <h1 class="ovPadLeft">Background</h1>
-              <p class="lead overview-font ovPadLeft" id="">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
-                in reprehenderit in voluptate velit esse cillum dolore eu fugiat
-                nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-                sunt in culpa qui officia deserunt mollit anim id est laborum.
-              </p>
-            </div>
-          </div>
-
-          <div class="row">
-            <div class="col-sm-8 p-3">
-              <h1 class="ovPadLeft">Rationale</h1>
-              <p class="lead overview-font ovPadLeft" id="">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
-                in reprehenderit in voluptate velit esse cillum dolore eu fugiat
-                nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-                sunt in culpa qui officia deserunt mollit anim id est laborum.
-              </p>
-            </div>
-            <div class="col-sm-4 p-3">
-              <img
-                class="img-fluid"
-                src="img/watermap.jpg"
-                alt="Water Temperature Graph"
-              />
-            </div>
-          </div>
-
-          <div class="row">
-            <div class="col-sm-4 p-3">
-              <img
-                class="img-fluid"
-                src="img/phytoplankton-pnas.jpg"
-                alt="Phytoplankton"
-              />
-            </div>
-            <div class="col-sm-8 p-3">
-              <h1 class="ovPadLeft">Research Practicum</h1>
-              <p class="lead overview-font ovPadLeft" id="">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
-                in reprehenderit in voluptate velit esse cillum dolore eu fugiat
-                nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-                sunt in culpa qui officia deserunt mollit anim id est laborum.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Footer -->
-      <footer class="p-5 footer text-light text-center position-relative">
-        <div class="container">
-          <p class="lead">Copyright &copy; SE 2024 Bootstrap Demo</p>
-          <a href="#" class="position-absolute bottom-0 end-0 p-5">
-            <i class="bi bi-arrow-up-circle h2 icon-white"></i>
-          </a>
-        </div>
-      </footer>
+      </div>
     </div>
+
+    <!-- Content Section: Background, Rationale, Conclusions -->
+    <div class="container-2-3 section">
+      <!-- Background Section -->
+      <div class="row align-items-center g-5 py-2 pt-5">
+        <div class="col-md-5 image-hover-container">
+          <img
+            src="img/cdc-fall-stat.png"
+            alt="Background Image"
+            class="img-fluid rounded-3 shadow-sm"
+          />
+          <div class="image-caption">
+            Source:
+            <a
+              class="caption-link"
+              href="https://www.securesafetysolutions.com/cdc-fallstatistics/"
+              target="_blank"
+              >Secure Safety Solutions</a
+            >
+          </div>
+        </div>
+        <div class="col-md-7">
+          <h3 class="h2 fw-bold mb-4">Background</h3>
+          <ul>
+            <li>
+              Falls are a significant global health concern, especially for the
+              elderly population.
+            </li>
+            <li>
+              Traditional fall detection systems can be costly, intrusive, and
+              inaccurate.
+            </li>
+            <li>
+              Wi-Fi sensing offers a non-invasive, cost-effective alternative
+              using existing infrastructure.
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Rationale Section -->
+      <div class="row align-items-center g-5 mt-5 py-2">
+        <div class="col-md-7">
+          <h3 class="h2 fw-bold mb-4">Rationale</h3>
+          <ul>
+            <li>
+              The goal was to improve the effectiveness of fall detection
+              systems using Wi-Fi sensing.
+            </li>
+            <li>
+              This project focused on developing a signal processing framework
+              tailored for this purpose.
+            </li>
+            <li>
+              Key techniques include filtering, feature extraction, and
+              predictive algorithms to optimize performance.
+            </li>
+          </ul>
+        </div>
+        <div class="col-md-5 image-hover-container image-hover">
+          <img
+            src="img/wifi-sensing.jpg"
+            alt="Rationale Image"
+            class="img-fluid rounded-4 shadow-sm"
+          />
+          <div class="image-caption">
+            Source:
+            <a
+              class="caption-link"
+              href="https://wisecomlab.github.io/research.html"
+              target="_blank"
+              >Wireless Sensing and Communication Lab</a
+            >
+          </div>
+        </div>
+      </div>
+
+      <!-- Conclusions Section -->
+      <div class="row align-items-center g-5 mt-5 py-2">
+        <div class="col-md-5 image-hover-container">
+          <img
+            src="img/conclusions.jpg"
+            alt="Conclusions Image"
+            class="img-fluid rounded-3 shadow-sm"
+          />
+          <div class="image-caption">
+            Source:
+            <a
+              class="caption-link"
+              href="https://drive.google.com/file/d/1WokJHnYsFhaqScHmfrkk7i9q58vbd_g1/view?usp=sharing"
+              target="_blank"
+              >Research Poster</a
+            >
+          </div>
+        </div>
+        <div class="col-md-7">
+          <h3 class="h2 fw-bold mb-4">Conclusions</h3>
+          <ul>
+            <li>
+              The developed framework outperforms previous Wi-Fi-based fall
+              detection systems.
+            </li>
+            <li>
+              MANOVA results showed a significant improvement with a p-value of
+              0.022.
+            </li>
+            <li>
+              Wi-Fi sensing is positioned as a promising alternative for future
+              fall detection advancements.
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer py-4">
+      <div class="container-2-3 text-center">
+        <p class="mb-0">
+          &copy; 2024
+          <a href="https://niyelhassan.com" target="_blank">Niyel Hassan</a>.
+          View source on
+          <a href="https://github.com/niyelhassan/rp_hassan" target="_blank"
+            >GitHub</a
+          >. <a href="#" id="scroll-top">&#x25B2; Scroll to Top</a>
+        </p>
+      </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"></script>
   </body>
 </html>

@@ -1,87 +1,291 @@
-/* ----------------- Class CSS ----------------- */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap");
 
-.about {
-  width: 400px;
-  margin: auto;
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+li,
+a,
+button {
+  font-family: "IBM Plex Sans", sans-serif;
 }
 
-.about-team {
-  color: rgb(82, 81, 81);
+.container-2-3 {
+  max-width: 70%;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-.authors {
-  background-color: #dbe3e7;
+.navbar {
+  backdrop-filter: blur(5px);
+  top: 2%;
+  background-color: rgba(5, 17, 62, 0.8);
+  animation: fadeIn 0.75s ease-in-out;
 }
 
-.body {
-  background-color: rgb(90, 92, 92);
-}
-
-.footer {
-  background-color: #023e8a;
-}
-
-.icon-white {
-  /* Arrow icon at bottom of page */
+#active-link {
   color: #ffffff;
+  text-decoration: underline;
 }
 
-.nb-background-color {
-  /* navbar background color */
-  background-color: #023e8a;
+.navbar-nav .nav-link {
+  transition: color 0.3s ease-in-out;
+  font-weight: 400;
+  transition: text-decoration-color 300ms;
+  text-decoration: underline rgba(255, 255, 255, 0);
+  color: #ffffffca;
 }
 
-.nbMenuItem {
-  /* navbar link text properties */
-  font-size: 25px;
-  margin-left: 10px;
-  margin-right: 10px;
+.navbar-nav .nav-link:hover {
+  color: #fff;
+  text-decoration: underline rgba(255, 255, 255, 1);
 }
 
-.overview {
-  background-color: #dbe3e7;
+.section {
+  padding: 3rem 0;
+  animation: fadeInUp 0.75s ease-in-out;
 }
 
-.ovPadLeft {
-  padding-left: 20px;
+.section-contained {
+  animation: fadeInUp 0.75s ease-in-out;
 }
 
-.ovPadRight {
-  padding-right: 20px;
+.footer p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #001b34;
 }
 
-.procedure {
-  background-color: #dbe3e7;
-  padding: 1px;
+a {
+  color: #001b34;
+  text-underline-offset: 0.25rem;
 }
 
-.showcase {
-  background-color: #8fa3ab; /*#0096c7*/
+a:hover {
+  color: #0400ff;
 }
 
-/* ----------------- ID CSS ----------------- */
+@media (max-width: 1370px) {
+  .container-2-3 {
+    max-width: 80%;
+  }
+}
 
-/* -----------------Underline Animation CSS -----------------*/
-.hover-underline-animation {
-  display: inline-block;
+@media (max-width: 900px) {
+  .container-2-3 {
+    max-width: 90%;
+  }
+}
+
+@media (max-width: 395px) {
+  .custom-link {
+    margin: 5px 10px 0px 10px !important;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.custom-link {
+  color: #001b34;
+  font-size: 1.1rem;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  text-decoration: underline;
+}
+
+.custom-link:hover {
+  color: #0400ff;
+}
+
+.custom-link svg {
+  fill: currentColor;
+  transition: fill 0.3s ease;
+}
+
+.custom-link:hover svg {
+  fill: #0400ff;
+}
+
+#scroll-top {
+  transition: font-weight 50ms;
+  margin-left: 1%;
+}
+
+#scroll-top:hover {
+  font-weight: 700;
+  color: #001b34;
+}
+
+.construction-container {
+  padding: 5rem 2rem;
+  border-radius: 15px;
+  margin-top: 8rem;
+  margin-bottom: 8rem;
+  animation: fadeIn 1s ease-in-out;
+}
+
+.construction-container h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #001b34;
+}
+
+.construction-container p {
+  font-size: 1.25rem;
+  color: #6c757d;
+}
+
+.construction-icon {
+  font-size: 4rem;
+  color: #007bff;
+  margin-bottom: 1rem;
+  animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-30px);
+  }
+  60% {
+    transform: translateY(-15px);
+  }
+}
+
+.image-hover-container {
   position: relative;
-  /*color: #0087ca;*/
+  display: inline-block;
+  transition: transform ease 300ms;
 }
 
-.hover-underline-animation:after {
-  content: "";
+.image-hover-container:hover {
+  transform: translate(0, -5px);
+}
+
+.image-caption {
   position: absolute;
-  width: 100%;
-  transform: scaleX(0);
-  height: 2px;
-  bottom: 0;
+  bottom: 5;
   left: 0;
-  background-color: #eae6e6;
-  /*transform-origin: bottom right;*/
-  transition: transform 0.35s ease-out;
+  width: 100%;
+  padding: 5px;
+  color: #001b34;
+  text-align: center;
+  font-size: 14px;
+  opacity: 0;
+  transition: opacity 300ms ease;
 }
 
-.hover-underline-animation:hover:after {
-  transform: scaleX(1);
-  /*transform-origin: bottom left;*/
+.image-caption-hero {
+  position: absolute;
+  bottom: 5;
+  left: 0;
+  width: 100%;
+  padding: 5px;
+  padding-top: 15px;
+  color: #001b34;
+  text-align: center;
+  font-size: 14px;
+  opacity: 0;
+  transition: opacity 300ms ease;
+}
+
+.image-hover-container:hover .image-caption-hero {
+  opacity: 1;
+}
+
+.image-hover-container:hover .image-caption {
+  opacity: 1;
+}
+
+.caption-link {
+  color: #001b34;
+  font-size: 0.9rem;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  text-decoration: underline;
+}
+
+.caption-link:hover {
+  color: #0400ff;
+}
+
+.th-bg {
+  background-color: #05113e !important;
+  color: white !important;
+}
+
+.rounded-table {
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.table-text {
+  font-size: 1.5rem;
+  color: #001b34;
+}
+
+.img-fixed-size {
+  height: 150px;
+  object-fit: cover;
+  width: 100%;
+}
+
+.lightbox {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: 9999;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+
+.lightbox img {
+  max-width: 90%;
+  max-height: 90%;
+}
+
+:target {
+  display: flex;
+}
+
+.expanded-image {
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
 }
